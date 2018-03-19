@@ -7,3 +7,5 @@ et retourne le résultat
 Ensuite dans un fichier .php, créez un nouvel objet en instanciant
 Connexion et appelez la méthode en envoyant une requête sql avec
 COUNT ...
+
+> Bonus perso : utiliser le MVC
