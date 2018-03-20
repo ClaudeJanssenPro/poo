@@ -1,6 +1,6 @@
 <?php
 // °°°°°°°°°°°°°°°°°°°°°°°°°° Definitions °°°°°°°°°°°°°°°°°°°°°°°°°°
-  $host = "http://10.203.0.127";
+  $host = "localhost";
   $dbname = "claude";
   $charset = "utf8mb4";
   $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";

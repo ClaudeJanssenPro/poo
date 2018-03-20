@@ -1,35 +1,30 @@
 <?php
-include('debug.php');
-// °°°°°°°°°°°°°°°°°°°°°°°°°° Definitions °°°°°°°°°°°°°°°°°°°°°°°°°°
-  $host = 'http://10.203.0.127';
-  $dbname = "claude";
-  $charset = "utf8mb4";
-  $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
-  $user = "root";
-  $pass = "root";
-  $opt = [
-      PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-      PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-  ];
+// °°°°°°°°°°°°°°°°°°°°°°°°°° Debug °°°°°°°°°°°°°°°°°°°°°°°°°°
+require_once('controllers/debug.php');
+// °°°°°°°°°°°°°°°°°°°°°°°°°° Defines °°°°°°°°°°°°°°°°°°°°°°°°°°
+require_once('controllers/defines.php');
 // °°°°°°°°°°°°°°°°°°°°°°°°°° HookUp °°°°°°°°°°°°°°°°°°°°°°°°°°
-class Connexion extends PDO{
+class Connexion
+{
   private static $_instance;
-  public function __construct() {
+  public function __construct()
+  {
   }
-  public static function getInstance() {
+  public static function getInstance()
+  {
     if (!isset(self::$_instance))
     {
       try
       {
-        self::$_instance = new PDO($dsn, $user, $pass, $opt);
-        self::$_instance = new PDO(SQL_DSN, SQL_USERNAME, SQL_PASSWORD, SQL_OPTIONS);
+        static::$_instance = new PDO(SQL_DSN, SQL_USERNAME, SQL_PASSWORD,[PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
+        static::$_instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       }
-      catch (Exception $e)
+      catch (PDOException $e)
       {
         die('Erreur : '.$e->getMessage());
       }
-      // return self::$_instance;
     }
+        return static::$_instance;
   }
 }
 ?>
