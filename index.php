@@ -1,3 +1,10 @@
+<!-- ## Exercice 1 : Helpers Class
+## Exercice 2
+## Exercice 3
+
+## Challenge 1
+## Challenge 2 -->
+
 <?php
   // °°°°°°°°°°°°°°°°°°°°°°°°°° Debug °°°°°°°°°°°°°°°°°°°°°°°°°°
   require_once('controllers/debug.php');

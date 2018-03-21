@@ -1,11 +1,11 @@
 <?php
-  class chal2Controller
+  class ex1Controller
   {
     function __construct()
     {
     }
     public function run(){
-  		require_once VIEWS . 'challenge02.html';
+  		require_once VIEWS . 'exercice1.html';
   	}
   }
 ?>

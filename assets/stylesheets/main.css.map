@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAOA,OAAO,CAAP,mEAAO;ACPP,AACI,OADG,CACH,CAAC,CAAC;EACE,KAAK,EAAE,IAAI;CACd;;ACHL,AACI,OADG,CACH,CAAC,CAAC;EACE,KAAK,EAAE,KAAK;CACf;;AFML,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAE,MAAM;CAC3B;;AAED,AAAA,OAAO,CAAC;EAZJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAWH,IAAI;CACpB;;AACD,AAAA,OAAO,CAAC;EAfJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,EAcH,KAAK;CACrB",
+    "sources": [
+        "main.scss",
+        "partial/_divone.scss",
+        "partial/_divtwo.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

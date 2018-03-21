@@ -1,0 +1,19 @@
+@mixin box($color) {
+    width: 100px;
+    height: 100px;
+    background-color: $color;
+}
+@import "partial/_divone";
+@import "partial/_divtwo";
+@import "normalize";
+
+body {
+    background-color: yellow;
+}
+
+.divone {
+    @include box(pink);
+}
+.divtwo {
+    @include box(white);
+}

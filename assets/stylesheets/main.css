@@ -1,0 +1,25 @@
+@import url(/home/user/Desktop/Link to html/scss/stylesheets/normalize.css);
+.divone p {
+  color: blue;
+}
+
+.divtwo p {
+  color: green;
+}
+
+body {
+  background-color: yellow;
+}
+
+.divone {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+
+.divtwo {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */
