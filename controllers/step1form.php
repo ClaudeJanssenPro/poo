@@ -4,12 +4,12 @@ Pour la classe `Form` Vous n'êtes pas obligé de vous baser sur l'exemple plus 
 Cette classe devra avoir des méthodes et des propriétés afin de pouvoir générer :
 
 - Le début d'un formulaire `<form ...>`
-- Un input text `<input type="text"...>`
-- Un select `<select ...> ...</select>`
-- Un bouton submit `<button type="submit"></button>`
-- Un textarea `<textarea ...> ...</textarea>`
-- Un radio button `<textarea ...> ...</textarea>`
-- Une checkbox `<input type="radio"...>`
+- OK Un input text `<input type="text"...>`
+- OK Un select `<select ...> ...</select>`
+- OK Un bouton submit `<button type="submit"></button>`
+- OK Un textarea `<textarea ...> ...</textarea>`
+- OK Un radio button `<textarea ...> ...</textarea>`
+- OK Une checkbox `<input type="radio"...>`
 
 Vous devez créer cette classes en pensant qu'elles devront être utilisées par un autre développeur.
 Utilisez des noms de propriétés et de méthodes qui ont du sens, restez simple et commentez votre code. -->
@@ -30,15 +30,43 @@ class Form
   {
     return isset($this->data[$index]) ? $this->data[$index] : null;
   }
-  public function input($name)
+  public function text($name)
   {
     return $this->surround(
       '<input type="text" name="' . $name . '"  placeholder="' . $name . '" value="' .$this->getValue($name) .'">'
+    );
+  }
+  public function textarea($name)
+  {
+    return $this->surround(
+      '<input type="textarea" name="' . $name . '"  placeholder="' . $name . '" value="' .$this->getValue($name) .'">'
+    );
+  }
+  public function select()
+  {
+    return $this->surround(
+      '<select>
+       <option></option>
+       <option></option>
+      </select>'
+    );
+  }
+  public function radio($name)
+  {
+    return $this->surround(
+      '<input type="radio" name="' . $name . '" value="' .$this->getValue($name) .'">'
+    );
+  }
+  public function checkbox($name)
+  {
+    return $this->surround(
+      '<input type="checkBox" name="' . $name . '" value="' .$this->getValue($name) .'">'
     );
   }
   public function submit()
   {
     return $this->surround('<button type="submit">Envoyer</button>');
   }
+
 }
 ?>
